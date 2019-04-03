@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+</head>
+<body>
+
+<br>
+<p class="text-center">BET365</p>
+<hr>
+
+
+	<div class="card">
+		<table class="table table-hover shopping-cart-wrap">
+			<thead class="text-muted">
+				<tr>
+					<th scope="col">Descripcion</th>
+					<th scope="col" width="120">Mercado</th>
+					<th scope="col" width="120">Cuota</th>
+					<th scope="col" width="200" class="text-right">Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>
+
+						<figure class="media">
+							<figcaption class="media-body">
+								<h6 class="title text-truncate">${apuesta.descripcion}</h6>
+								<dl class="param param-inline small">
+									<dt>Stake:</dt>
+									<dd>2.0</dd>
+								</dl>
+							</figcaption>
+						</figure>
+
+					</td>
+
+					<td>
+							${apuesta.mercado.nombre}
+					</td>
+
+					<td>
+						<div class="price-wrap">
+							<var class="price">${apuesta.cuota}</var>
+						</div>
+					</td>
+					<td class="text-right"><a href=""
+						class="btn btn-outline-danger"> × Borrar</a></td>
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+
+
+<a href="agregar" class="btn btn-succes" type="submit">AGREGAR</a>
+
+</body>
+</html>
