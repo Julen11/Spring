@@ -22,8 +22,7 @@ public class ApuestaJdbcTemplateRepository implements CrudAble<Apuesta> {
 	
 	@Override
 	public List<Apuesta> getAll() {
-		String sql="SELECT a.id, a.cuota, a.descripcion, a.acertada,m.nombre from apuesta a\\\\r\\\\n\\\" + \\r\\n\" + \r\n" + 
-				"				\"				\\\"inner join mercado m on m.id = a.mercado_id";
+		String sql="SELECT a.id, a.cuota, a.descripcion, a.acertada,m.nombre from apuesta a inner join mercado m on m.id = a.mercado_id";
 		return jdbc.query(sql, new ApuestaMapper());
 	}
 
